@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+body{
+  height: 100%;
+  background: rgb(240, 240, 234, 0);
+  font-family: "Geologica", sans-serif;
+  font-style: normal;
+  color: rgb(50, 50, 50);
+}
+
+.bold-title{
+  font-family: 'Source Sans Pro', sans-serif;  
+}
+
+.link{
+  display: inline;
+  font-size: 5vw; 
+  margin-top: 0;  
+  margin-bottom: 0;
+  bottom: 0px;
+  color: rgb(50, 50, 50);
+}
+
+.linkDiv{
+  margin: 0;
+  bottom: 0px;
+  display: inline-block;
+  width: auto; 
+  height: auto;
+}
+
+.linkDrop{
+  margin-top: 0.5vw;
+  width: 0;
+  height: 6vw;
+  z-index: -1;
+  background-color: rgb(242, 30, 84);;
+  position: absolute; 
+  animation: none;
+  transition: .3s;
+}
+
+.linkIn{
+  display: block;
+  width: 16vw;
+  animation: hoverLink .3s linear;
+}
+
+.linkOut{
+  display: block;
+  width: 0;
+  animation: hoverLink .3s linear;
+}
+
+@keyframes hoverLink{
+  0% {width: 0;}
+  55% {width: 14vw;}
+  100% {width: 16vw;}
+}
+
+
+/*
+.linkDiv:hover > .linkDrop {
+  display: block;
+  width: 16vw;
+  animation: hoverLink .3s linear;
+}
+  */
+
+

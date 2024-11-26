@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+body{
+  background: rgb(240, 240, 234, 0);
+  font-family: "Geologica", sans-serif;
+  font-style: normal;
+}
+
+.bold-title{
+  font-family: 'Source Sans Pro', sans-serif;  
+}
+
+/* mobile device screen size */
+@media only screen and (orientation:portrait) {
+  .box{
+    outline-offset: -7vw;
+    margin: 0px;
+    float: left;
+    background: rgb(50, 50, 50);
+    border-radius: 4vw;
+    width: 20vw;
+    height: 20vw;
+    outline: 0px solid rgba(255, 255, 255, 0);
+    transition: .5s ease;
+    position: absolute;
+  }
+  .box:hover{
+      animation: rumble2 .6s linear infinite;
+      outline: 1vw solid rgba(255, 255, 255, 0.4);
+      /*z-index: 10;*/
+  }
+  #slide1{
+    right: 25.5vw;
+    margin-top: 30vh;
+  }
+  #background2{
+    width: 87.5vw;
+    height: 87.5vw;
+    right: 7vw;
+    margin-top: 22.5vh;
+    border-radius: 30px;
+  }
+    #background{
+    width: 87.5vw;
+    height: 87.5vw;
+    right: 7vw;
+    margin-top: 22.5vh;
+    border-radius: 30px;
+  }
+}
+
+/* computer screen size */
+@media only screen and (orientation:landscape) {
+.box{
+  outline-offset: -40px;
+  margin: 0px;
+  float: left;
+  background: rgb(30, 30, 30);
+  border-radius: 4vw;
+  width: 20vw;
+  height: 20vw;
+  outline: 0px solid lightgrey;
+  transition: .5s ease;
+  position: absolute;
+}
+.box:hover{
+    animation: rumble2 .6s linear infinite;
+    outline: 4px solid white;
+}
+    #background2{
+    width: 550px;
+    height: 550px;
+    margin-top: 0vh;
+    border-radius: 30px;
+  }
+    #background{
+    width: 550px;
+    height: 550px;
+    margin-top: 0vh;
+    border-radius: 30px;
+  }
+}
+
+
+
+.byebye{
+  display: none;
+}
+.null{
+  background: grey;
+  z-index: -10;
+}
+.yes
+{
+    background: rgb(242, 30, 84);
+}
+.turq
+{
+    background: rgb(10, 151, 160);
+}
+/* Alternate colours*/
+.purple
+{
+    background: rgb(168, 0, 162);
+}
+.green
+{
+    background: rgb(3, 188, 135);
+}
+.orange
+{
+    background: rgb(255, 149, 0);
+}
+.blue
+{
+    background: rgb(14, 113, 189);
+}
+
+.small{
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+#background2{
+  transition: 0.6s;
+  background: rgba(40, 40, 40, 0.4);
+  position: absolute;
+  top: 134px;
+  z-index: 1;
+  border-radius: 30px;
+  
+}
+
+#background{
+  background: rgb(220, 220, 220);
+  z-index: -1;
+  position: absolute;
+  top: 134px;
+  border-radius: 30px;
+  
+}
+
+.rumble{
+  animation: rumble .3s;
+}
+
+@keyframes rumble{
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(8deg);}
+  75% {transform: rotate(-8deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes rumble2{
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(4deg);}
+  75% {transform: rotate(-4deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.selected{
+  outline: 5px solid lightgrey;
+  outline-offset: -40px;
+  animation: rumble2 .6s linear infinite;
+}
+
+
+
+#background3{
+  background: rgb(220, 220, 220);
+  z-index: -1;
+  position: absolute;
+  width: 250px;
+  height: 450px;
+  top: 134px;
+  left: 32px;
+  border-radius: 30px;
+  
+}
+
+
+#background4{
+  background: rgb(220, 220, 220);
+  z-index: -1;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 44px;
+  right: 95px;
+  border-radius: 30px;
+  
+}
