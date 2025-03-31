@@ -15,7 +15,7 @@ body{
 
 .link{
   display: inline;
-  font-size: 5vw; 
+  font-size: 4vw; 
   margin-top: 0;  
   margin-bottom: 0;
   bottom: 0px;
@@ -43,7 +43,7 @@ body{
 
 .linkIn{
   display: block;
-  width: 16vw;
+  width: 14vw;
   animation: hoverLink .3s linear;
 }
 
