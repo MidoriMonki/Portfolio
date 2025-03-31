@@ -1,8 +1,8 @@
 $(".linkDiv").hover(
     function () {
-        $(this).find('.linkDrop').removeClass('linkOut').addClass('linkIn');
+        $(this).find('.linkOut').addClass('linkIn').removeClass('linkOut');
     },
     function () {
-        $(this).find('.linkDrop').removeClass('linkIn');
+        $(this).find('.linkIn').removeClass('linkIn').addClass('linkOut');
     }
 );

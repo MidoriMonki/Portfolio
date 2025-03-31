@@ -1,8 +1,16 @@
 var row = 0;
 //var originalPositionsY = ["0px", "110px", "110px", "110px", "220px", "220px", "220px", "220px", "220px", "330px", "330px", "330px", "440px"];
 //var originalPositionsX = ["220px", "110px", "220px", "330px", "0px", "110px", "220px", "330px", "440px", "110px", "220px", "330px", "220px"];
-var originalPositionsY = ["0", "20vw", "20vw", "20vw", "40vw", "40vw", "40vw", "40vw", "40vw", "60vw", "60vw", "60vw", "80vw"];
-var originalPositionsX = ["40vw", "20vw", "40vw", "60vw", "0vw", "20vw", "40vw", "60vw", "80vw", "20vw", "40vw", "60vw", "40vw"];
+//var originalPositionsY = ["0", "20vw", "20vw", "20vw", "40vw", "40vw", "40vw", "40vw", "40vw", "60vw", "60vw", "60vw", "80vw"];
+//var originalPositionsX = ["40vw", "20vw", "40vw", "60vw", "0vw", "20vw", "40vw", "60vw", "80vw", "20vw", "40vw", "60vw", "40vw"];
+var originalPositionsY = [0, 20, 20, 20, 40, 40, 40, 40, 40, 60, 60, 60, 80];
+var originalPositionsX = [40, 20, 40, 60, 0, 20, 40, 60, 80, 20, 40, 60, 40];
+
+//multiple scale
+var ms = .3;
+//unit scale
+var us = "vw";
+
 var vPosX;
 var uPosX;
 var vPosY;
@@ -44,9 +52,12 @@ for (var i=0;i<13;i++){
     p = document.createElement("div");
     p.id = i+1;
     p.classList.add("box");
+    p.style.left = originalPositionsX[i]*ms + us;
+    p.style.top = originalPositionsY[i]*ms + us;
+    p.style.setProperty('--i', 20*ms + us)
+    p.style.setProperty('--br', 4*ms + us)
     document.getElementById("slide1").appendChild(p);
 }
-
 
 //Start by adding event listeners to each block
 for (var i=0;i<13;i++)
@@ -83,7 +94,7 @@ function dragStart(e)
   }
 }
 
-//Moving   mode0 = Y, mode1 = X, mode2= nothing I guess
+//Moving: mode0 = Y, mode1 = X, mode2 = nothing I guess
 function dragMove(e)
 {
   console.log(e.type);
@@ -105,7 +116,7 @@ function dragMove(e)
   }
 }
 
-//Moving   mode0 = Y, mode1 = X, mode2= nothing I guess
+//Moving:  mode0 = Y, mode1 = X, mode2 = nothing I guess
 function dragEnd(e)
 {
   console.log(e.type);
@@ -138,7 +149,7 @@ function dragEnd(e)
       //Set their left property correctly
       for(var i=(row*5);i<(5+(row*5));i++){
         if (storePositions[i] != 0){
-            slide.children[storePositions[i]-1].style.left = (2-(i-(row*5)))*-20+40 + "vw";
+            slide.children[storePositions[i]-1].style.left = ((2-(i-(row*5)))*-20+40)*ms + us;
 
         }
       } 
@@ -169,7 +180,7 @@ function dragEnd(e)
     //Set their top property correctly
       for(var i=0;i<5;i++){
         if (storePositions[row+(i*5)] != 0){
-            slide.children[storePositions[row+(i*5)]-1].style.top = (2-i)*-20+40 + "vw";
+            slide.children[storePositions[row+(i*5)]-1].style.top = ((2-i)*-20+40)*ms + us;
         }
       } 
   }
@@ -393,7 +404,7 @@ function solveDrag(r, m, u, v){
         //Set their left property correctly
         for(var i=(row*5);i<(5+(row*5));i++){
           if (storePositions[i] != 0){
-              slide.children[storePositions[i]-1].style.left = (2-(i-(row*5)))*-20+40 + "vw";
+              slide.children[storePositions[i]-1].style.left = ((2-(i-(row*5)))*-20+40)*ms + us;
   
           }
         } 
@@ -424,7 +435,7 @@ function solveDrag(r, m, u, v){
       //Set their top property correctly
         for(var i=0;i<5;i++){
           if (storePositions[row+(i*5)] != 0){
-              slide.children[storePositions[row+(i*5)]-1].style.top = (2-i)*-20+40 + "vw";
+              slide.children[storePositions[row+(i*5)]-1].style.top = ((2-i)*-20+40)*ms + us;
           }
         } 
     }

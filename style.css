@@ -6,6 +6,7 @@ body{
   background: rgb(240, 240, 234, 0);
   font-family: "Geologica", sans-serif;
   font-style: normal;
+  font-weight: 200;
   color: rgb(50, 50, 50);
 }
 
@@ -15,7 +16,7 @@ body{
 
 .link{
   display: inline;
-  font-size: 5vw; 
+  font-size: 3vw; 
   margin-top: 0;  
   margin-bottom: 0;
   bottom: 0px;
@@ -23,49 +24,29 @@ body{
 }
 
 .linkDiv{
-  margin: 0;
-  bottom: 0px;
   display: inline-block;
-  width: auto; 
+  width: fit-content;
+  margin-right: .5vw;
   height: auto;
 }
 
-.linkDrop{
-  margin-top: 0.5vw;
-  width: 0;
-  height: 6vw;
-  z-index: -1;
-  background-color: rgb(242, 30, 84);;
-  position: absolute; 
-  animation: none;
-  transition: .3s;
-}
-
 .linkIn{
-  display: block;
-  width: 16vw;
-  animation: hoverLink .3s linear;
+  position: absolute;
+  display: inline-block;
+  height: 4vw;
+  width: calc(var(--i) * 1vw);
+  z-index: -1;
+  transition-duration: 1s;
+  background-color: var(--colourIn);
 }
 
 .linkOut{
-  display: block;
-  width: 0;
-  animation: hoverLink .3s linear;
+  position: absolute;
+  display: inline-block;
+  height: 4vw;
+  width: 0vw;
+  z-index: -1;
+  transition-duration: 1s;
+  background-color: var(--colourOut)
 }
-
-@keyframes hoverLink{
-  0% {width: 0;}
-  55% {width: 14vw;}
-  100% {width: 16vw;}
-}
-
-
-/*
-.linkDiv:hover > .linkDrop {
-  display: block;
-  width: 16vw;
-  animation: hoverLink .3s linear;
-}
-  */
-
 

@@ -58,9 +58,9 @@ body{
   margin: 0px;
   float: left;
   background: rgb(30, 30, 30);
-  border-radius: 4vw;
-  width: 20vw;
-  height: 20vw;
+  border-radius: var(--br);
+  width: var(--i);
+  height: var(--i);
   outline: 0px solid lightgrey;
   transition: .5s ease;
   position: absolute;
