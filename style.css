@@ -1,13 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
-
 body{
   height: 100%;
-  background: rgb(240, 240, 234, 0);
   font-family: "Geologica", sans-serif;
   font-style: normal;
   font-weight: 200;
   color: rgb(50, 50, 50);
+}
+
+@property --time {
+  initial-value: 0;
+  inherits: false;
+  syntax: "<number>";
+}
+
+.backdrop span{
+  --UNIT: 1vw;
+  font-weight: 600;
+  font-size: 6vw;
+  font-style: normal;
+  opacity: 0.1;
+  position: absolute;
+  transform: translate(calc((10 * sin(3 * var(--time)) + cos(10*var(--time))) * var(--UNIT)), calc(10 * cos(var(--time)) * var(--UNIT)));
+  animation: backdrop 10s linear infinite;
+}
+
+#paw{
+  pointer-events: none;
+  transition: translate 0.5s ease-out;
+  transition-delay: 10ms;
+  position: absolute;
+  width: 20vw;
+  height: 50vw;
+    -webkit-transform: scale(-1, -1);
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+
+@keyframes backdrop{
+/*
+  0%{opacity: 0.2; transform: translateY(calc());}
+  100%{opacity: 1; transform: translateY(-11px)}
+*/
+  0%{--time: 0;}
+  100%{--time: 12;}
 }
 
 .bold-title{
@@ -36,7 +73,7 @@ body{
   height: 4vw;
   width: calc(var(--i) * 1vw);
   z-index: -1;
-  transition-duration: 1s;
+  transition-duration: .6s;
   background-color: var(--colourIn);
 }
 
@@ -46,7 +83,7 @@ body{
   height: 4vw;
   width: 0vw;
   z-index: -1;
-  transition-duration: 1s;
+  transition-duration: .6s;
   background-color: var(--colourOut)
 }
 
