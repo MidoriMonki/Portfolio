@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Izaac Murray | Apps</title>
+    <link rel="icon" type="image/gif" href="images/ico.gif">
+    <meta charset="UTF-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style2.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="freePlay.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  </head>
+  <body style="background-color: rgb(242, 242, 242); overflow: hidden;">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Signika:wght@300..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Noto+Color+Emoji&display=swap');
+
+      .wave{
+          position: relative;
+          font-size: 4vw;
+          margin-bottom: 0; 
+          margin-top: 0;
+      }
+      .wave span{
+        font-family: "Noto Color Emoji", sans-serif;
+        position: relative;
+        display: inline-block;
+        animation: wavy 3s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i));
+        transform: translateY(0px);
+      }
+      @keyframes wavy{
+          0%{transform: translateY(0px);}
+          30%{transform: translateY(-10px);}
+          60%, 100%{transform: translateY(0px);}
+      }
+
+    </style>
+
+    <div style="padding: 15vw; padding-top: 10vw; float: left;">
+      <!-- left widget, biography/links -->
+      <div style="float: left; width: 80%; padding-right: 1%; height: 100%;">
+        <h1 class="wave">
+          <span style="--i:1">A</span><span style="--i:2">p</span><span style="--i:3">p</span><span style="--i:4">l</span><span style="--i:5">i</span><span style="--i:6">c</span><span style="--i:7">a</span><span style="--i:8">t</span><span style="--i:9">i</span><span style="--i:10">o</span><span style="--i:11">n</span><span style="--i:12">s</span>
+        </h1>
+            <br>
+            <br>
+            <br>
+        <div class="linkDiv">
+          <div class="linkOut" style="--i:10; --colourOut: rgb(3, 188, 135); --colourIn: rgb(3, 188, 135);"></div>
+          <a class="link" href="https://github.com/MidoriMonki/3D-Asteroid-Impact-Visualiser">AIV 3D</a>
+        </div>
+            <br>
+        <p style="font-size: 3vw; margin-top: 0;  margin-bottom: 0; display: inline;">A 3D Visualiser for asteriod impact simulation results.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div class="linkDiv">
+          <div class="linkOut" style="--i:12; --colorOut: rgb(242, 30, 84); --colourIn: rgb(255, 149, 0);"></div>
+          <a class="link" href="https://github.com/MidoriMonki/BinsOut">Bins Out</a>
+        </div>
+            <br>
+        <p style="font-size: 3vw; margin-top: 0;  margin-bottom: 0; display: inline;">A swift IOS app to help you keep track of your bin day. Uses widgets.</p>
+
+
+      </div>
+      <!-- right widget, game -->
+      <div style="float: left; width: 30vw; height: 30vw;">
+        <!-- <div style="background-image: url(images/monkey.png); width: 100px; height: 100px;"></div> -->
+        <!-- <div id="slide1" style="width: 30vw; height: 30vw; position: absolute;"></div> -->
+      </div>
+     <!-- <div style="float: left; width: 30vw; height: 30vw; background-color: blueviolet;">
+      </div>
+    </div>-->
+    <!-- <div class="backdrop">  <span style="--x:1;">*</span></div> -->
+    <img id="paw" style="width: 300px; height: auto;" src="images/paw.png">
+    <!-- <span id="dot" style="width: 15px; height: 15px;  background: red; border-radius: 20px; position: absolute;"></span> -->
+  </body>
+</html>

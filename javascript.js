@@ -5,7 +5,44 @@ var mouseY = 0;
 var x = 0;
 var y = 0;
 
-function tick() {
+var states = [
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "______🚗",
+  "_____🚗_",
+  "____🚗__",
+  "___🚗___",
+  "__🚗____",
+  "_🚗_____",
+  "🚗______",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+  "________",
+];
+
+
+ 
+var index = 0;
+var wait = 0;
+
+function tick() { 
     var now = Date.now();
     var dt = now - lastUpdate;
     lastUpdate = now;
@@ -16,6 +53,16 @@ function tick() {
       left: x,
       top: y
     });
+
+    if(wait == 0){
+      document.title = "Izaac Murray | " + states[index];
+      wait = 21;
+      index+=1;
+      if(index>states.length-1){
+        index=0;
+      }
+    }
+    wait-=1;
 }
 
 //current_value = start_float + (end_float - start_float) * (elapsed_time / total_duration) 
