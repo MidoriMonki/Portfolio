@@ -11,22 +11,28 @@ var states = [
   "________",
   "________",
   "________",
-  "______🚗",
-  "_____🚗_",
-  "____🚗__",
-  "___🚗___",
-  "__🚗____",
-  "_🚗_____",
-  "🚗______",
   "________",
   "________",
   "________",
-  "________",
-  "________",
-  "________",
-  "________",
-  "________",
-  "________",
+  "_______I",
+  "______Iz",
+  "_____Iza",
+  "____Izaa",
+  "___Izaac",
+  "__Izaac_",
+  "_Izaac_M",
+  "Izaac_Mu",
+  "zaac_Mur",
+  "aac_Murr",
+  "ac_Murra",
+  "c_Murray",
+  "_Murray_",
+  "Murray__",
+  "urray___",
+  "rray____",
+  "ray_____",
+  "ay______",
+  "y_______",
   "________",
   "________",
   "________",
@@ -37,10 +43,10 @@ var states = [
   "________",
 ];
 
-
  
 var index = 0;
 var wait = 0;
+var mooing = 0;
 
 function tick() { 
     var now = Date.now();
@@ -55,9 +61,11 @@ function tick() {
     });
 
     if(wait == 0){
-      document.title = "Izaac Murray | " + states[index];
-      wait = 21;
+      //document.title = "Izaac Murray | " + states[index];
+      document.title = states[index];
+      wait = 25;
       index+=1;
+      mooing+=1;
       if(index>states.length-1){
         index=0;
       }
